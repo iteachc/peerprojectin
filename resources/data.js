@@ -17,19 +17,35 @@ const RESOURCE_DATA = [
   },
   {
     "id": "physics-hc-verma",
-    "group": "physics-boards-jee-neet",
+    "group": "physics-jee-neet-books",
     "title": "HC Verma - Concepts of Physics (Vol 1 & 2)",
     "url": null,
     "tags": [],
-    "note": "The correct starting point for almost every Indian student. Builds genuine conceptual intuition rather than formula-matching. If you only own one physics book, this is it."
+    "note": "The correct starting point for going beyond boards-level physics. Teaches you why the formulas work instead of just how to plug numbers into them. If you only own one physics book, this is it."
   },
   {
     "id": "physics-dc-pandey",
-    "group": "physics-boards-jee-neet",
+    "group": "physics-jee-neet-books",
     "title": "DC Pandey",
     "url": null,
     "tags": [],
-    "note": "Problem volume, closely matched to the JEE and NEET pattern alike."
+    "note": "Problem volume, built around the actual JEE and NEET question style rather than generic physics problems."
+  },
+  {
+    "id": "physics-galaxy",
+    "group": "physics-jee-neet-books",
+    "title": "Ashish Arora - Physics Galaxy",
+    "url": null,
+    "tags": [],
+    "note": "Five volumes, each covering a different topic rather than five versions of the same thing - mechanics, thermodynamics and waves, electrostatics, magnetism and modern physics. More solved examples than DC Pandey, and pitched right at JEE Main and Advanced."
+  },
+  {
+    "id": "physics-invisiblemechanics",
+    "group": "physics-jee-neet-lectures",
+    "title": "Aditya Jha (Invisible Mechanics)",
+    "url": "https://www.youtube.com/@InvisibleMechanics",
+    "tags": ["free"],
+    "note": "Solves JEE Advanced problems live on stream, wrong turns and all - not a scripted, error-free solution video. Best once the basics are solid enough to follow the mistakes as they happen."
   },
   {
     "id": "boards-ncert-exemplar",
@@ -37,11 +53,11 @@ const RESOURCE_DATA = [
     "title": "NCERT Exemplar Problems",
     "url": "https://ncert.nic.in/exemplar-problems.php",
     "tags": ["free"],
-    "note": "Free, official, and genuinely the most underused resource there is. Significantly harder than the NCERT textbook exercises, and a large share of difficult board and competitive exam questions trace directly back to it. Most students do not know it exists."
+    "note": "Free, official, and easily the most underused resource there is. Significantly harder than the NCERT textbook exercises, and a large share of difficult board and competitive exam questions trace directly back to it. Most students do not know it exists."
   },
   {
     "id": "boards-ncert-textbooks",
-    "group": "boards-ncert",
+    "group": "boards-ncert-textbooks",
     "title": "NCERT Textbooks",
     "url": "https://ncert.nic.in/textbook.php",
     "tags": ["free"],
@@ -49,7 +65,7 @@ const RESOURCE_DATA = [
   },
   {
     "id": "boards-cbse-sample",
-    "group": "boards-ncert",
+    "group": "boards-cbse-sample",
     "title": "CBSE Sample Papers and Marking Schemes",
     "url": "https://cbseacademic.nic.in/",
     "tags": ["free"],
@@ -108,10 +124,10 @@ const RESOURCE_DATA = [
   {
     "id": "boards-cengage",
     "group": "boards-cengage",
-    "title": "Cengage series",
+    "title": "Cengage",
     "url": null,
     "tags": [],
-    "note": "Solved examples ramping from easy to hard. Good for self-study without a teacher."
+    "note": "Solved examples that start easy and get properly difficult by the end of each chapter. Good for self-study without a teacher."
   },
   {
     "id": "physics-kalda",
@@ -234,6 +250,70 @@ const RESOURCE_DATA = [
     "note": "The same community behind the maths archive on our Mathematics page, with a dedicated physics section and real olympiad-training subforums."
   },
   {
+    "id": "physics-restisscience",
+    "group": "physics-curiosity",
+    "title": "The Rest Is Science",
+    "url": "https://www.youtube.com/@TheRestIsScience",
+    "tags": ["free"],
+    "note": "Hannah Fry and Michael Stevens (the creator of Vsauce) trying to answer one big scientific question at a time. Actually rigorous, not dumbed down."
+  },
+  {
+    "id": "physics-vsauce",
+    "group": "physics-curiosity",
+    "title": "Vsauce",
+    "url": "https://www.youtube.com/@Vsauce",
+    "tags": ["free"],
+    "note": "Starts with a rather strange question and follows it wherever the physics, maths or philosophy actually leads."
+  },
+  {
+    "id": "physics-veritasium",
+    "group": "physics-curiosity",
+    "title": "Veritasium",
+    "url": "https://www.youtube.com/@veritasium",
+    "tags": ["free"],
+    "note": "Physicist-run, and unusually careful about walking through the common misconception before the right answer - most science channels skip that step."
+  },
+  {
+    "id": "physics-kurzgesagt",
+    "group": "physics-curiosity",
+    "title": "Kurzgesagt - In a Nutshell",
+    "url": "https://www.youtube.com/@kurzgesagt",
+    "tags": ["free"],
+    "note": "Animated, broad-scope science - as much astrophysics and biology as physics, but the physics episodes hold up on their own."
+  },
+  {
+    "id": "physics-vtphysics",
+    "group": "physics-curiosity",
+    "title": "vt.physics",
+    "url": "https://www.youtube.com/@vt.physics",
+    "tags": ["free"],
+    "note": "Short-form: reacts to a viral video and explains or debunks the physics in it. Good for the five minutes between problem sets."
+  },
+  {
+    "id": "physics-electroboom",
+    "group": "physics-curiosity",
+    "title": "ElectroBOOM",
+    "url": "https://www.youtube.com/@ElectroBOOM",
+    "tags": ["free"],
+    "note": "Electrical engineering taught by a man who shocks himself on camera to make a point about circuits. Funnier than it sounds, and the physics behind the pain is correct."
+  },
+  {
+    "id": "physics-minutephysics",
+    "group": "physics-curiosity",
+    "title": "MinutePhysics",
+    "url": "https://www.youtube.com/@minutephysics",
+    "tags": ["free"],
+    "note": "Fast, whiteboard-style explanations of one physics idea at a time. Good for a quick refresher, not for building intuition from scratch."
+  },
+  {
+    "id": "physics-shelter",
+    "group": "physics-curiosity",
+    "title": "THE PHYSICS SHELTER",
+    "url": "https://www.youtube.com/@thephysicsshelter",
+    "tags": ["free"],
+    "note": "Treats physics as a way of thinking rather than a list of formulas to apply - closer to how the subject actually gets taught at university."
+  },
+  {
     "id": "physics-feynman",
     "group": "physics-curiosity",
     "title": "The Feynman Lectures on Physics",
@@ -271,7 +351,7 @@ const RESOURCE_DATA = [
     "title": "Physics Forums",
     "url": "https://www.physicsforums.com/",
     "tags": ["free"],
-    "note": "Running since 2001, and it shows - a genuinely deep archive of answered questions across physics, maths and engineering, moderated by people who actually know the subject."
+    "note": "Running since 2001, and it shows - a real deep archive of answered questions across physics, maths and engineering, moderated by people who actually know the subject."
   },
   {
     "id": "physics-se",
@@ -331,12 +411,28 @@ const RESOURCE_DATA = [
     "note": "Visual, intuition-first explanations of linear algebra, calculus and analysis. Does not teach problem-solving - teaches why the thing is true, which is usually the missing piece."
   },
   {
+    "id": "maths-restisscience",
+    "group": "maths-curiosity",
+    "title": "The Rest Is Science",
+    "url": "https://www.youtube.com/@TheRestIsScience",
+    "tags": ["free"],
+    "note": "Hannah Fry (a mathematician by training) and Michael Stevens trying to answer one big scientific question at a time."
+  },
+  {
+    "id": "maths-hannah-fry",
+    "group": "maths-curiosity",
+    "title": "Hannah Fry",
+    "url": "https://www.youtube.com/@fryrsquared",
+    "tags": ["free"],
+    "note": "Cambridge maths professor, applying maths to everyday systems - dating, crime, pandemics. The best example on this page of what maths is actually for."
+  },
+  {
     "id": "maths-professor-leonard",
     "group": "maths-curiosity",
     "title": "Professor Leonard",
     "url": "https://www.youtube.com/@ProfessorLeonard",
     "tags": ["free"],
-    "note": "Full-length, unhurried university lectures on precalculus, calculus I-III and differential equations. One of the best lecturers on the internet if you need the whole thing built from the ground up rather than a ten-minute summary."
+    "note": "Full-length, unhurried university lectures on precalculus, calculus I-III and differential equations. One of the best lecturers on the internet if you need the whole thing built from scratch."
   },
   {
     "id": "maths-spivak",
@@ -345,6 +441,31 @@ const RESOURCE_DATA = [
     "url": null,
     "tags": ["hard"],
     "note": "Rigorous, proof-based calculus - not what you need to pass a board or JEE question, but the book if you actually want to know why calculus works instead of just computing with it. Slow and demanding. Treat it as a long-term project, not exam prep."
+  },
+  {
+    "id": "maths-arvind-kalia",
+    "group": "maths-jee-lectures",
+    "title": "Arvind Kalia (JEE Nexus)",
+    "url": "https://www.youtube.com/@JEEnexus",
+    "tags": ["free"],
+    "note": "Students point to him more often than any single JEE-pattern maths book we could recommend instead."
+  },
+  {
+    "id": "maths-nishant-vora",
+    "group": "maths-jee-lectures",
+    "title": "Nishant Vora (Vora Classes)",
+    "url": "https://www.youtube.com/@voraclasses",
+    "tags": ["free"],
+    "note": "Best for the advanced end of JEE maths specifically - once the basics are solid, this is where to go for the harder problem types."
+  },
+  {
+    "id": "maths-vora-bounceback",
+    "group": "maths-jee-lectures",
+    "child": true,
+    "title": "Vora Classes - JEE Bounce Back series",
+    "url": "https://www.youtube.com/playlist?list=PLtQdWUqHDcGrDxWQtw1EU8DV0JwoM4J5-",
+    "tags": ["free"],
+    "note": "An older series built specifically for rebuilding the foundation, not the advanced content above - start here if the advanced lectures feel like a stretch."
   },
   {
     "id": "maths-zeitz",
@@ -392,7 +513,7 @@ const RESOURCE_DATA = [
     "title": "Counting Rocks! An Introduction to Combinatorics",
     "url": "https://arxiv.org/abs/2108.07206",
     "tags": ["free"],
-    "note": "Free on arXiv. A genuinely beginner-friendly entry into combinatorics, starting from pre-olympiad material."
+    "note": "Free on arXiv. A properly beginner-friendly entry into combinatorics, starting from pre-olympiad material."
   },
   {
     "id": "maths-lemmas-geometry",
@@ -456,7 +577,7 @@ const RESOURCE_DATA = [
     "title": "r/learnmath",
     "url": "https://www.reddit.com/r/learnmath/",
     "tags": ["free"],
-    "note": "Patient with genuine beginner questions in a way that r/math, below, generally is not."
+    "note": "Patient with real beginner questions in a way that r/math, below, generally is not."
   },
   {
     "id": "maths-r-math",
@@ -472,7 +593,15 @@ const RESOURCE_DATA = [
     "title": "CODsite",
     "url": "https://chem.isodn.org/",
     "tags": ["free"],
-    "note": "A student-run chemistry olympiad resource site with genuinely opinionated, specific guidance - beginner and intermediate roadmaps, honest commentary on which textbooks are actually necessary versus commonly over-bought, and per-year notes on which past IChO papers are worth your time. Rare to find advice this non-generic."
+    "note": "A student-run chemistry olympiad resource site with unusually opinionated, specific guidance - beginner and intermediate roadmaps, honest commentary on which textbooks are actually necessary versus commonly over-bought, and per-year notes on which past IChO papers are worth your time. Rare to find advice this non-generic."
+  },
+  {
+    "id": "chem-nilered",
+    "group": "chemistry-curiosity",
+    "title": "NileRed",
+    "url": "https://www.youtube.com/@NileRed",
+    "tags": ["free"],
+    "note": "Films real syntheses start to finish, including failed attempts. Also his experiments are fun: spending two years creating alcohol from air and stuff. You might actually like him."
   },
   {
     "id": "chem-libretexts",
@@ -512,7 +641,7 @@ const RESOURCE_DATA = [
     "title": "Klein - Organic Chemistry",
     "url": null,
     "tags": [],
-    "note": "Mechanism-focused and readable. Widely considered the only organic text genuinely required for olympiad work up to national level."
+    "note": "Mechanism-focused and readable. Widely considered the only organic text actually required for olympiad work up to national level."
   },
   {
     "id": "chem-atkins-jones",
@@ -556,7 +685,7 @@ const RESOURCE_DATA = [
   },
   {
     "id": "chem-ms-chouhan",
-    "group": "chemistry-boards-jee-neet",
+    "group": "chemistry-jee-neet-books",
     "title": "MS Chouhan - Organic Chemistry",
     "url": null,
     "tags": [],
@@ -564,7 +693,7 @@ const RESOURCE_DATA = [
   },
   {
     "id": "chem-jd-lee",
-    "group": "chemistry-boards-jee-neet",
+    "group": "chemistry-jee-neet-books",
     "title": "JD Lee - Concise Inorganic Chemistry",
     "url": null,
     "tags": [],
@@ -572,11 +701,43 @@ const RESOURCE_DATA = [
   },
   {
     "id": "chem-n-awasthi",
-    "group": "chemistry-boards-jee-neet",
+    "group": "chemistry-jee-neet-books",
     "title": "N Awasthi - Physical Chemistry",
     "url": null,
     "tags": [],
     "note": "The standard physical chemistry problem book for JEE and NEET alike."
+  },
+  {
+    "id": "chem-rohit-agarwal",
+    "group": "chemistry-jee-neet-lectures",
+    "title": "Rohit Agarwal - Organic Chemistry",
+    "url": null,
+    "tags": ["free"],
+    "note": "Teaches organic chemistry for PW / JEE Wallah - if he still does. He has been \"about to leave PW\" for quite sometime now, so who knows by the time you read this. Doesn't matter much either way: PW doesn't delete old lectures. His MANZIL one-shots are free on YouTube and worth watching on their own; the full batch lectures on the platform go further, if you have access to them."
+  },
+  {
+    "id": "chem-faisal-razaq",
+    "group": "chemistry-jee-neet-lectures",
+    "title": "Faisal Razaq - Physical Chemistry",
+    "url": null,
+    "tags": ["free"],
+    "note": "Teaches physical chemistry for PW / JEE Wallah, same as Rohit Agarwal above - free MANZIL one-shots on YouTube, and the full batch lectures on the platform if you have access to them."
+  },
+  {
+    "id": "chem-sakshi-vora-inorganic",
+    "group": "chemistry-jee-neet-lectures",
+    "title": "Sakshi Vora (Vora Classes) - Inorganic Chemistry",
+    "url": "https://www.youtube.com/@voraclasses",
+    "tags": ["free"],
+    "note": "Consistently recommended for inorganic specifically - dense, fact-heavy material most teachers just read out, she actually organises."
+  },
+  {
+    "id": "chem-sakshi-vora-ncert",
+    "group": "chemistry-jee-neet-lectures",
+    "title": "Sakshi Vora - NCERT Line by Line",
+    "url": "https://www.youtube.com/@voraclasses",
+    "tags": ["free"],
+    "note": "Goes through NCERT chemistry line by line rather than summarising it - the closest thing to sitting next to someone who has actually read the textbook. Her other lectures on the same channel are worth the watch too."
   },
   {
     "id": "chem-nsec",
@@ -616,7 +777,7 @@ const RESOURCE_DATA = [
     "title": "ACS USNCO Preparation forum",
     "url": "https://communities.acs.org/t5/USNCO-Preparation/gh-p/USNCOPreparation",
     "tags": ["free"],
-    "note": "Run by the American Chemical Society itself. Aimed at the US olympiad but genuinely useful for anyone at IChO level - volunteers who actually write and grade these exams answer questions here."
+    "note": "Run by the American Chemical Society itself. Aimed at the US olympiad but really useful for anyone at IChO level - volunteers who actually write and grade these exams answer questions here."
   },
   {
     "id": "chem-se",
@@ -643,8 +804,16 @@ const RESOURCE_DATA = [
     "note": "Smaller and more homework-focused than r/chemistry - a better fit if your question is \"why did I get this specific problem wrong\" rather than a general discussion."
   },
   {
+    "id": "chem-littlealchemy",
+    "group": "chemistry-curiosity",
+    "title": "Little Alchemy & Little Alchemy 2",
+    "url": "https://littlealchemy2.com/",
+    "tags": ["free"],
+    "note": "Not educational, just a properly fun combine-the-elements browser game if you want a break that still feels vaguely chemistry-adjacent."
+  },
+  {
     "id": "bio-ncert-biology",
-    "group": "biology-boards-neet",
+    "group": "biology-neet-books",
     "title": "NCERT Biology, Class XI & XII",
     "url": "https://ncert.nic.in/textbook.php",
     "tags": ["free"],
@@ -652,11 +821,11 @@ const RESOURCE_DATA = [
   },
   {
     "id": "bio-campbell",
-    "group": "biology-boards-neet",
+    "group": "biology-neet-books",
     "title": "Campbell Biology",
     "url": null,
     "tags": [],
-    "note": "Genuinely the core book, for NEET as much as for olympiad - described across essentially every resource list as the closest thing to a required text. Any edition from the ninth onwards is fine - do not pay a premium for the latest. Read after NCERT, not instead of it."
+    "note": "Essentially the core book, for NEET as much as for olympiad - described across essentially every resource list as the closest thing to a required text. Any edition from the ninth onwards is fine - do not pay a premium for the latest. Read after NCERT, not instead of it."
   },
   {
     "id": "bio-alberts",
@@ -736,7 +905,7 @@ const RESOURCE_DATA = [
     "title": "iNaturalist",
     "url": "https://www.inaturalist.org/",
     "tags": ["free"],
-    "note": "Photograph organisms, get identification, contribute to real biodiversity datasets. Good for ecology coursework and genuinely good for building a research-adjacent extracurricular."
+    "note": "Photograph organisms, get identification, contribute to real biodiversity datasets. Good for ecology coursework and actually good for building a research-adjacent extracurricular."
   },
   {
     "id": "bio-nseb",
@@ -768,7 +937,7 @@ const RESOURCE_DATA = [
     "title": "Biology Olympiad Discord (BODS)",
     "url": "https://discord.com/invite/fMhYTZqMKU",
     "tags": ["free"],
-    "note": "Over 6000 members focused specifically on USABO and IBO preparation - the most active place to get a genuinely hard data-interpretation question looked at."
+    "note": "Over 6000 members focused specifically on USABO and IBO preparation - the most active place to get a real hard data-interpretation question looked at."
   },
   {
     "id": "bio-biolympiads-studygroup",
